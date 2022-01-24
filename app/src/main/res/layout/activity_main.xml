@@ -4,31 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#9A00BCD4"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtIDPartida"
-        android:layout_width="152dp"
+        android:layout_width="143dp"
         android:layout_height="0dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginBottom="359dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginBottom="21dp"
         android:text="ID PARTIDA"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/btnGenerarPartida"
+        app:layout_constraintBottom_toTopOf="@+id/llistajugadors"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnGenerarPartida"
-        android:layout_width="201dp"
+        android:layout_width="194dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="17dp"
         android:text="Generar Partida"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnIniciarPartida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llistajugadors" />
+
+    <Button
+        android:id="@+id/btnIniciarPartida"
+        android:layout_width="194dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:text="Iniciar Partida"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGenerarPartida" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/llistajugadors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerarPartida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIDPartida" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="323dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtIDPartida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoapp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
