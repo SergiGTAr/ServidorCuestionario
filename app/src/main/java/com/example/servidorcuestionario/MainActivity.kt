@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity() {
         val dbinstance =
             FirebaseDatabase.getInstance("https://servidorquestionari-default-rtdb.europe-west1.firebasedatabase.app")
         database = dbinstance.getReference("")
+            .+
+
+
+
+
 
         return database
     }
